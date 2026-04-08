@@ -37,8 +37,8 @@ export default function NewRequestPage() {
           <ArrowLeft className="w-4 h-4" />
         </Link>
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">New Request</h1>
-          <p className="text-sm text-gray-500">Submit a new service request</p>
+          <h1 className="text-2xl font-bold text-foreground">New Request</h1>
+          <p className="text-sm text-muted-foreground">Submit a new service request</p>
         </div>
       </div>
 

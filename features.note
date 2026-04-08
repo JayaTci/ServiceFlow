@@ -46,6 +46,7 @@
 
 ### UX & Design
 - Responsive layout (mobile drawer sidebar, desktop sidebar)
+- Dark/light mode toggle (dark default, next-themes)
 - Loading skeleton states
 - Error boundaries per route
 - Toast notifications for all mutations

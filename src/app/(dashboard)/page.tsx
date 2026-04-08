@@ -44,8 +44,8 @@ export default async function DashboardPage() {
       {/* Page header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-          <p className="text-sm text-gray-500 mt-0.5">
+          <h1 className="text-2xl font-bold text-foreground">Dashboard</h1>
+          <p className="text-sm text-muted-foreground mt-0.5">
             Welcome back, {session.user.name}
           </p>
         </div>
@@ -111,19 +111,19 @@ export default async function DashboardPage() {
           </Link>
         </CardHeader>
         <CardContent className="p-0">
-          <div className="divide-y divide-gray-100">
+          <div className="divide-y divide-border">
             {recentRequests.data.length === 0 ? (
-              <p className="text-sm text-gray-400 text-center py-8">No requests yet</p>
+              <p className="text-sm text-muted-foreground text-center py-8">No requests yet</p>
             ) : (
               recentRequests.data.map((req) => (
                 <Link
                   key={req.id}
                   href={`/requests/${req.id}`}
-                  className="flex items-center justify-between px-6 py-3.5 hover:bg-gray-50 transition-colors"
+                  className="flex items-center justify-between px-6 py-3.5 hover:bg-muted/50 transition-colors"
                 >
                   <div className="min-w-0 flex-1">
-                    <p className="text-sm font-medium text-gray-900 truncate">{req.title}</p>
-                    <p className="text-xs text-gray-500 mt-0.5">
+                    <p className="text-sm font-medium text-foreground truncate">{req.title}</p>
+                    <p className="text-xs text-muted-foreground mt-0.5">
                       {req.requestCode} · {req.requestedBy.name} · {formatDate(req.dateRequested)}
                     </p>
                   </div>

@@ -17,7 +17,7 @@ export default function DashboardLayout({
   const user = session?.user;
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-background">
       {/* Desktop sidebar */}
       <aside className="hidden lg:flex lg:w-64 flex-shrink-0">
         <Sidebar role={user?.role} />

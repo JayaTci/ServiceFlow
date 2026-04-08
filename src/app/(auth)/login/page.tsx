@@ -44,14 +44,14 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-50 p-4">
+    <div className="min-h-screen flex items-center justify-center bg-background p-4">
       <div className="w-full max-w-sm">
         {/* Logo */}
         <div className="flex items-center justify-center gap-2.5 mb-8">
           <div className="w-9 h-9 bg-blue-600 rounded-xl flex items-center justify-center">
             <Layers className="w-5 h-5 text-white" />
           </div>
-          <span className="text-2xl font-bold text-gray-900">ServiceFlow</span>
+          <span className="text-2xl font-bold text-foreground">ServiceFlow</span>
         </div>
 
         <Card>
@@ -93,15 +93,15 @@ export default function LoginPage() {
               </Button>
             </form>
 
-            <p className="text-center text-sm text-gray-500 mt-4">
+            <p className="text-center text-sm text-muted-foreground mt-4">
               Don&apos;t have an account?{" "}
               <Link href="/register" className="text-blue-600 hover:underline font-medium">
                 Register
               </Link>
             </p>
 
-            <div className="mt-4 p-3 bg-gray-50 rounded-lg text-xs text-gray-500 space-y-1">
-              <p className="font-medium text-gray-600">Demo accounts:</p>
+            <div className="mt-4 p-3 bg-muted rounded-lg text-xs text-muted-foreground space-y-1">
+              <p className="font-medium text-foreground">Demo accounts:</p>
               <p>Admin: admin@serviceflow.com / admin123</p>
               <p>User: john@serviceflow.com / user123</p>
             </div>

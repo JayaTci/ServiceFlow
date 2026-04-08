@@ -51,8 +51,8 @@ export default async function RequestsPage({
       {/* Header */}
       <div className="flex items-center justify-between">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Requests</h1>
-          <p className="text-sm text-gray-500 mt-0.5">
+          <h1 className="text-2xl font-bold text-foreground">Requests</h1>
+          <p className="text-sm text-muted-foreground mt-0.5">
             {result.total} total request{result.total !== 1 ? "s" : ""}
           </p>
         </div>
@@ -133,7 +133,7 @@ export default async function RequestsPage({
 
       {/* Pagination */}
       {totalPages > 1 && (
-        <div className="flex items-center justify-between text-sm text-gray-500">
+        <div className="flex items-center justify-between text-sm text-muted-foreground">
           <p>
             Page {currentPage} of {totalPages}
           </p>

@@ -36,14 +36,14 @@ export function Sidebar({ role, onClose }: SidebarProps) {
   const pathname = usePathname();
 
   return (
-    <div className="flex flex-col h-full bg-white border-r border-gray-200">
+    <div className="flex flex-col h-full bg-background border-r border-border">
       {/* Logo */}
-      <div className="flex items-center justify-between h-16 px-6 border-b border-gray-200">
+      <div className="flex items-center justify-between h-16 px-6 border-b border-border">
         <Link href="/" className="flex items-center gap-2.5">
           <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
             <Layers className="w-4 h-4 text-white" />
           </div>
-          <span className="font-semibold text-gray-900 text-lg">ServiceFlow</span>
+          <span className="font-semibold text-lg">ServiceFlow</span>
         </Link>
         {onClose && (
           <Button variant="ghost" size="icon" onClick={onClose} className="lg:hidden">
@@ -69,11 +69,11 @@ export function Sidebar({ role, onClose }: SidebarProps) {
                 className={cn(
                   "flex items-center gap-3 px-3 py-2.5 rounded-lg text-sm font-medium transition-colors",
                   isActive
-                    ? "bg-blue-50 text-blue-700"
-                    : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                    ? "bg-blue-600/10 text-blue-500 dark:bg-blue-500/20 dark:text-blue-400"
+                    : "text-muted-foreground hover:bg-muted hover:text-foreground"
                 )}
               >
-                <item.icon className={cn("w-5 h-5 flex-shrink-0", isActive ? "text-blue-600" : "text-gray-400")} />
+                <item.icon className={cn("w-5 h-5 flex-shrink-0", isActive ? "text-blue-500 dark:text-blue-400" : "text-muted-foreground")} />
                 {item.label}
               </Link>
             );
@@ -81,8 +81,8 @@ export function Sidebar({ role, onClose }: SidebarProps) {
       </nav>
 
       {/* Footer */}
-      <div className="px-3 py-4 border-t border-gray-200">
-        <p className="text-xs text-gray-400 px-3">
+      <div className="px-3 py-4 border-t border-border">
+        <p className="text-xs text-muted-foreground px-3">
           {role === "admin" ? "Administrator" : "Staff"}
         </p>
       </div>

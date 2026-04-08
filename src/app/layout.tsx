@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${geistSans.variable} h-full`}>
-      <body className="h-full antialiased bg-gray-50 text-gray-900 font-sans">
+      <body className="h-full antialiased bg-background text-foreground font-sans">
         <Providers>{children}</Providers>
         <Toaster richColors position="top-right" />
       </body>

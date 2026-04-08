@@ -42,11 +42,11 @@ export default async function RequestDetailPage({
         </Link>
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
-            <span className="font-mono text-sm text-gray-400">{request.requestCode}</span>
+            <span className="font-mono text-sm text-muted-foreground">{request.requestCode}</span>
             <StatusBadge status={request.status} />
             <PriorityBadge priority={request.priority} />
           </div>
-          <h1 className="text-xl font-bold text-gray-900 truncate mt-0.5">{request.title}</h1>
+          <h1 className="text-xl font-bold text-foreground truncate mt-0.5">{request.title}</h1>
         </div>
         {canEdit && !isEditMode && (
           <Link href={`/requests/${id}?edit=true`} className={cn(buttonVariants({ variant: "outline" }))}>
@@ -79,35 +79,35 @@ export default async function RequestDetailPage({
         <Card>
           <CardContent className="p-6 space-y-5">
             <div>
-              <p className="text-sm font-medium text-gray-500 mb-1">Description</p>
-              <p className="text-gray-800 whitespace-pre-wrap">{request.description}</p>
+              <p className="text-sm font-medium text-muted-foreground mb-1">Description</p>
+              <p className="text-foreground whitespace-pre-wrap">{request.description}</p>
             </div>
 
             <Separator />
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-5">
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Type</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Type</p>
                 <p className="text-sm font-medium">{REQUEST_TYPE_LABELS[request.requestType]}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Department</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Department</p>
                 <p className="text-sm font-medium">{request.department}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Requested By</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Requested By</p>
                 <p className="text-sm font-medium">{request.requestedBy.name}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Date Requested</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Date Requested</p>
                 <p className="text-sm font-medium">{formatDate(request.dateRequested)}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Created</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Created</p>
                 <p className="text-sm font-medium">{formatDate(request.createdAt)}</p>
               </div>
               <div>
-                <p className="text-xs text-gray-400 uppercase tracking-wide mb-1">Last Updated</p>
+                <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">Last Updated</p>
                 <p className="text-sm font-medium">{formatDate(request.updatedAt)}</p>
               </div>
             </div>

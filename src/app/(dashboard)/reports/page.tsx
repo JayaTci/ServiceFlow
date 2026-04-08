@@ -40,8 +40,8 @@ export default async function ReportsPage({
     <div className="space-y-6">
       <div className="flex items-start justify-between flex-wrap gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-900">Reports</h1>
-          <p className="text-sm text-gray-500 mt-0.5">
+          <h1 className="text-2xl font-bold text-foreground">Reports</h1>
+          <p className="text-sm text-muted-foreground mt-0.5">
             Analyze and track service request patterns
           </p>
         </div>
@@ -59,7 +59,7 @@ export default async function ReportsPage({
           <Card key={s.label}>
             <CardContent className="p-4 text-center">
               <p className={`text-3xl font-bold ${s.color}`}>{s.value}</p>
-              <p className="text-xs text-gray-500 mt-1">{s.label}</p>
+              <p className="text-xs text-muted-foreground mt-1">{s.label}</p>
             </CardContent>
           </Card>
         ))}
@@ -167,18 +167,18 @@ function ReportTable({ data }: { data: { label: string; count: number }[] }) {
   return (
     <div className="space-y-2">
       {data.map((row) => (
-        <div key={row.label} className="flex items-center justify-between text-sm py-1.5 border-b border-gray-100 last:border-0">
-          <span className="text-gray-700">{row.label}</span>
+        <div key={row.label} className="flex items-center justify-between text-sm py-1.5 border-b border-border last:border-0">
+          <span className="text-foreground">{row.label}</span>
           <div className="flex items-center gap-3">
-            <span className="text-gray-500 text-xs">{total > 0 ? ((row.count / total) * 100).toFixed(0) : 0}%</span>
-            <span className="font-semibold text-gray-900 w-8 text-right">{row.count}</span>
+            <span className="text-muted-foreground text-xs">{total > 0 ? ((row.count / total) * 100).toFixed(0) : 0}%</span>
+            <span className="font-semibold text-foreground w-8 text-right">{row.count}</span>
           </div>
         </div>
       ))}
       {data.length > 0 && (
         <div className="flex items-center justify-between text-sm py-1.5 font-semibold">
-          <span className="text-gray-900">Total</span>
-          <span className="text-gray-900">{total}</span>
+          <span className="text-foreground">Total</span>
+          <span className="text-foreground">{total}</span>
         </div>
       )}
     </div>

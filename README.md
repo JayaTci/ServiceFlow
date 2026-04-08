@@ -22,6 +22,7 @@ ServiceFlow allows teams to submit, track, and manage service requests across de
 - **Dashboard** — Summary cards + 4 real-time charts
 - **Reports** — Date range filters, grouped breakdowns (status/type/dept/priority)
 - **Admin panel** — User management, role promotion/demotion
+- **Dark/light mode** — Dark theme by default, toggle in header
 
 ## Tech Stack
 

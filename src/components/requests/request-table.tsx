@@ -57,7 +57,7 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
     columnHelper.accessor("requestCode", {
       header: "Code",
       cell: (info) => (
-        <span className="font-mono text-xs text-gray-500">{info.getValue()}</span>
+        <span className="font-mono text-xs text-muted-foreground">{info.getValue()}</span>
       ),
     }),
     columnHelper.accessor("title", {
@@ -65,7 +65,7 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
       cell: (info) => (
         <Link
           href={`/requests/${info.row.original.id}`}
-          className="font-medium text-gray-900 hover:text-blue-600 line-clamp-1"
+          className="font-medium text-foreground hover:text-blue-600 line-clamp-1"
         >
           {info.getValue()}
         </Link>
@@ -74,12 +74,12 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
     columnHelper.accessor("requestType", {
       header: "Type",
       cell: (info) => (
-        <span className="text-sm text-gray-600">{REQUEST_TYPE_LABELS[info.getValue()]}</span>
+        <span className="text-sm text-muted-foreground">{REQUEST_TYPE_LABELS[info.getValue()]}</span>
       ),
     }),
     columnHelper.accessor("department", {
       header: "Department",
-      cell: (info) => <span className="text-sm text-gray-600">{info.getValue()}</span>,
+      cell: (info) => <span className="text-sm text-muted-foreground">{info.getValue()}</span>,
     }),
     columnHelper.accessor("priority", {
       header: "Priority",
@@ -92,7 +92,7 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
     columnHelper.accessor("dateRequested", {
       header: "Date",
       cell: (info) => (
-        <span className="text-sm text-gray-500">{formatDate(info.getValue())}</span>
+        <span className="text-sm text-muted-foreground">{formatDate(info.getValue())}</span>
       ),
     }),
     columnHelper.display({
@@ -104,7 +104,7 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
 
         return (
           <DropdownMenu>
-            <DropdownMenuTrigger className="inline-flex items-center justify-center w-8 h-8 rounded-md hover:bg-gray-100 outline-none">
+            <DropdownMenuTrigger className="inline-flex items-center justify-center w-8 h-8 rounded-md hover:bg-muted outline-none">
               <MoreHorizontal className="w-4 h-4" />
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
@@ -153,13 +153,13 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
 
   return (
     <>
-      <div className="rounded-lg border border-gray-200 overflow-hidden">
+      <div className="rounded-lg border border-border overflow-hidden">
         <Table>
           <TableHeader>
             {table.getHeaderGroups().map((headerGroup) => (
-              <TableRow key={headerGroup.id} className="bg-gray-50">
+              <TableRow key={headerGroup.id} className="bg-muted/50">
                 {headerGroup.headers.map((header) => (
-                  <TableHead key={header.id} className="text-xs font-semibold text-gray-600 uppercase tracking-wide">
+                  <TableHead key={header.id} className="text-xs font-semibold text-muted-foreground uppercase tracking-wide">
                     {flexRender(header.column.columnDef.header, header.getContext())}
                   </TableHead>
                 ))}
@@ -169,13 +169,13 @@ export function RequestTable({ data, currentUserId, isAdmin }: RequestTableProps
           <TableBody>
             {table.getRowModel().rows.length === 0 ? (
               <TableRow>
-                <TableCell colSpan={columns.length} className="text-center py-12 text-gray-400">
+                <TableCell colSpan={columns.length} className="text-center py-12 text-muted-foreground">
                   No requests found
                 </TableCell>
               </TableRow>
             ) : (
               table.getRowModel().rows.map((row) => (
-                <TableRow key={row.id} className="hover:bg-gray-50">
+                <TableRow key={row.id} className="hover:bg-muted/50">
                   {row.getVisibleCells().map((cell) => (
                     <TableCell key={cell.id} className="py-3">
                       {flexRender(cell.column.columnDef.cell, cell.getContext())}
