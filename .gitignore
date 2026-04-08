@@ -39,3 +39,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude
+.claude/
+
+# drizzle studio
+.drizzle/
+
+# project notes
+firstbuild.notes
+*.notes
+
+# assets (not for public repo)
+assets/
+../assets/

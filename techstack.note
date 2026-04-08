@@ -1,0 +1,43 @@
+## ServiceFlow Tech Stack
+
+### Core Framework
+- Next.js 16.2.2 (App Router, Server Components, Server Actions)
+- React 19.2.4
+- TypeScript 5
+
+### Styling & UI
+- Tailwind CSS v4
+- shadcn/ui (Base UI components)
+- Lucide React (icons)
+- tw-animate-css
+
+### Database & ORM
+- PostgreSQL 16
+- Drizzle ORM 0.45.x
+- Drizzle Kit (migrations)
+- pg (Node.js PostgreSQL driver)
+
+### Authentication
+- Auth.js v5 (next-auth@beta)
+- bcryptjs (password hashing)
+
+### Forms & Validation
+- React Hook Form 7.x
+- Zod v4
+- @hookform/resolvers
+
+### Data Visualization
+- Recharts 3.x
+
+### Table Management
+- TanStack Table v8
+
+### Utilities
+- date-fns 4.x
+- clsx + tailwind-merge (className utilities)
+- sonner (toast notifications)
+- tsx (TypeScript execution for seed scripts)
+
+### Dev Tools
+- ESLint
+- Drizzle Kit (DB management)
