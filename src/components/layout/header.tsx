@@ -6,13 +6,14 @@ import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
   DropdownMenuLabel,
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { logoutUser } from "@/lib/auth/actions";
+import { signOut } from "next-auth/react";
 import { Badge } from "@/components/ui/badge";
 
 interface HeaderProps {
@@ -75,13 +76,15 @@ export function Header({ userName, userEmail, userRole, onMenuToggle }: HeaderPr
             <ChevronDown className="w-3.5 h-3.5 text-muted-foreground" />
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-52">
-            <DropdownMenuLabel>
-              <p className="font-medium">{userName}</p>
-              <p className="text-xs text-muted-foreground font-normal">{userEmail}</p>
-            </DropdownMenuLabel>
+            <DropdownMenuGroup>
+              <DropdownMenuLabel>
+                <p className="font-medium">{userName}</p>
+                <p className="text-xs text-muted-foreground font-normal">{userEmail}</p>
+              </DropdownMenuLabel>
+            </DropdownMenuGroup>
             <DropdownMenuSeparator />
             <DropdownMenuItem
-              onClick={() => logoutUser()}
+              onClick={() => signOut({ callbackUrl: "/login" })}
               className="text-red-600 cursor-pointer"
             >
               <LogOut className="w-4 h-4 mr-2" />

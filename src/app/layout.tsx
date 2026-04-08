@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${geistSans.variable} h-full`}>
+    <html lang="en" className={`${geistSans.variable} h-full`} suppressHydrationWarning>
       <body className="h-full antialiased bg-background text-foreground font-sans">
         <Providers>{children}</Providers>
         <Toaster richColors position="top-right" />
