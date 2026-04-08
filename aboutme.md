@@ -1,6 +1,6 @@
 # ServiceFlow — Project Overview
 
-## What Is ServiceFlow?
+## What Is ServiceFlow?  (SERVICE REQUEST MANAGEMENT SYSTEM)
 
 ServiceFlow is a full-stack internal service request management system built for organizations that need a structured, trackable way to handle operational requests across departments. It replaces ad-hoc emails, chat messages, and spreadsheets with a centralized platform where employees submit requests, track their status, and administrators manage workflows end-to-end.
 
