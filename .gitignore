@@ -49,6 +49,12 @@ next-env.d.ts
 # project notes
 firstbuild.notes
 *.notes
+*.note
+
+# personal files
+aboutme.md
+CLAUDE.md
+AGENTS.md
 
 # assets (not for public repo)
 assets/
